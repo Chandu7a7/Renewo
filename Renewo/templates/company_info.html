@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'company_info.css'%}">
+    <title>company information</title>
+</head>
+<body>
+    <!-- this is logo -->
+    <header>
+        <div id="logo">
+            <div class="text">
+             <h2>𝓡𝓮𝓷𝓮𝔀𝓸</h2>
+            </div>
+            <div class="text">
+                <div class="box">
+                <h4>Already a user?</h4>
+            </div>
+            <div class="box">
+                <button><a href="#">Login</a></button>
+            </div>
+            </div>
+            </div>
+
+        </header>
+
+
+<!-- this is from attribute -->
+<div id="wastege">
+    <div class="waste">
+    <div class="form-container">
+        <h1>𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼  𝗥𝗲𝗻𝗲𝘄𝗼</h1>
+        <h4>Create your account to start company</h4>
+        <form method="post" action="company-info">
+            {% csrf_token %}
+            <div id="user">
+                <div class="user1">
+            <label for="firstName"><b> First Name:-</b></label><br>
+            <input style="width:180px;height: 27px;" type="text" id="firstName" name="firstName" required><br>
+        </div>
+        <div class="user1">
+            <label for="lastName"><b>Last Name:-</b></label><br>
+            <input style="width:180px;height: 27px;" type="text" id="lastName" name="lastName" required>
+        </div>
+        </div>
+        <div id="user">
+            <div class="user1">
+         <label for="phone"><b>Phone Number:-</b></label><br>
+        <input style="width: 180px;height: 27px;"  type="tel" id="phone" name="phone" required><br>
+        </div>
+        <div class="user1">
+            
+            <label for="pincode"><b>Pin Code:</b></label><br>
+            <input style="width:180px;height: 27px;" type="text" id="pincode" name="pincode" required>
+        
+       </div>
+    </div> 
+    <div id="user">
+        <div class="user1">
+            <label for="city"><b>City:</b></label><br>
+            <input style="width:180px;height:27px;"  type="text" id="city" name="city" required>    
+    </div>
+    <div class="user1">
+        <label for="state"><b>State:</b></label><br>
+        <input  style="width:180px;height: 27px;" type="text" id="state" name="state" required>
+        </div>
+    </div>
+    <label for="address"><b>Address:-</b></label><br>
+    <textarea id="address" name="address" required></textarea><br><br>
+            <button id="hover" style="background-color: rgb(180, 243, 243); border: 1px solid;" type="submit"><b>𝐒𝐭𝐚𝐫𝐭 𝐒𝐞𝐥𝐥</b></button>
+            <p>By clicking you agree to our <span> Terms & Conditions </span>and<span> Privacy Policy</span></p> 
+        </form>
+    </div>
+</div>
+    
+    <div class="waste">
+         
+         <img style="padding-left: 138px;" src="{% static "images/waste.png" %}" alt=""> 
+         <!-- <h4 style="padding-left: 300px;font-size: 28px;">𝐖𝐡𝐲 𝐬𝐞𝐥𝐥 𝐨𝐧 𝐫𝐞𝐧𝐞𝐰𝐨?</h4> -->
+    </div>
+</div>
+</body>
+</html>

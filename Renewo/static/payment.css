@@ -1,0 +1,191 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+body,html {
+  height:100%;
+  margin:0;
+  font-family:lato;
+}
+
+h2 {
+  margin-bottom:0px;
+  margin-top:25px;
+  text-align:center;
+  font-weight:200;
+  font-size:19px;
+  font-size:1.2rem;
+  
+}
+.container {
+  height:100%;
+  -webkit-box-pack:center;
+  -webkit-justify-content:center;
+      -ms-flex-pack:center;
+          justify-content:center;
+  -webkit-box-align:center;
+  -webkit-align-items:center;
+      -ms-flex-align:center;
+          align-items:center;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  background:-webkit-linear-gradient(#c5e5e5, #ccddf9);
+  background:linear-gradient(#c9e5e9,#ccddf9);
+}
+.dropdown-select.visible {
+  display:block;
+}
+.dropdown {
+  position:relative;
+}
+
+.window {
+  height: 540px;
+    width: 843px;
+    background: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    box-shadow: 0px 15px 50px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    z-index: 10;
+}
+/* .order-info {
+  height:100%;
+  width:50%;
+  padding-left:25px;
+  padding-right:25px;
+  box-sizing:border-box;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-pack:center;
+  -webkit-justify-content:center;
+      -ms-flex-pack:center;
+          justify-content:center;
+  position:relative;
+} */
+
+
+
+.credit-info-content{
+padding-right: 21px;
+padding-top: 28px;
+}
+
+.opt{
+    width: 400px;
+    padding: 10px;
+    background-color: #e7dcdc;
+}
+#pot{
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    background-color: #4488dd;
+    margin: 20px 0px 0px -1px;
+}
+
+#captch {
+    display:none ;
+    padding: 12px 16px;
+}
+#captch1 {
+  display:none ;
+  padding: 0
+  px 16px;
+}
+#upiid{
+  padding: 5px 0px 0px 40px;
+}
+#Button1{
+    padding: 10px ;
+    width: 100%;
+    background-color: rgb(233, 44, 44);
+    color: white;
+    border: #c5e5e5;
+    margin: 4px 0px 0px 0px;
+}
+
+@media (max-width: 600px) {
+  .window {
+    width: 100%;
+    height: 100%;
+    display:block;
+    border-radius:0px;
+  }
+  .order-info {
+    width:100%;
+    height:auto;
+    padding-bottom:100px;
+    border-radius:0px;
+  }
+  .credit-info {
+    width:100%;
+    height:auto;
+    padding-bottom:100px;
+    border-radius:0px;
+  }
+  .pay-btn {
+    border-radius:0px;
+  }
+}
+#city .state{
+    display: inline-block;
+}
+/* Reset some default styles */
+body, h1, label, input, textarea, button, div {
+    margin: 0;
+    padding: 0;
+}
+
+/* Form container styles */
+.form-container {
+    max-width: 400px;
+    margin-left: 120px;
+    margin-top: 64px;
+    padding: 20px;
+    text-align: center;
+    background:  rgb(204, 243, 248);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form label styles */
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Form input and textarea styles */
+input, textarea {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+/* Submit button styles */
+button {
+    background-color: #70b8ac;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #21b4e5;
+}
+

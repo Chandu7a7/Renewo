@@ -1,0 +1,160 @@
+{% include "header.html" %}
+
+<!-- ............. Slider Coding ........................... -->
+ {% load static %}
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <img src="{% static "images/s3.jpeg" %}" class="slider_img">
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="{% static "images/s4.jpeg" %}" class="slider_img">
+  </div>
+  
+  <div class="mySlides fade">
+    <img src=" {% static "images/s3.jpeg" %}" class="slider_img">
+  </div>
+  
+  <div class="mySlides fade">
+    <img src=" {% static "images/s4.jpeg" %}" class="slider_img">
+  </div>
+  <div class="mySlides fade">
+    <img src=" {% static "images/s1.jpeg" %}" class="slider_img">
+   </div>
+   <script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+let i;
+let slides = document.getElementsByClassName("mySlides");
+let dots = document.getElementsByClassName("dot");
+if (n > slides.length) {slideIndex = 1}    
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+  slides[i].style.display = "none";  
+}
+for (i = 0; i < dots.length; i++) {
+  dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";  
+dots[slideIndex-1].className += " active";
+}
+  </script>
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+
+  </div>
+
+<!-- ............................. Slider Javascipt Coding ...........................   -->
+{% comment %} <script src="renewo.js"></script> {% endcomment %}
+
+<!-- .............................. Tnis is box section .......................  -->
+
+<section class="mainsection">
+<section>
+  <div class="maindiv">
+  <h1>Best Of Products</h1>
+</div>
+</section>
+<main >
+  {% for product in products  %}
+     {% if forloop.counter <= 6 %}
+  <section class="product">
+    
+      <a href="/products/product-review/{{ product.product_name }}"><img src="{{product.imageURL}}" alt="Product 1" height="218px" width="182px"></a>
+      
+      <h2><strong>{{product.product_name}}</strong></h2>
+      <p>{{product.product_decp}}</p>
+      <span class="price">₹{{product.product_price|floatformat:2}}</span>
+  </section>
+  {% endif %}
+ {% endfor %}
+
+
+</main>
+</section>
+
+
+<section class="mainsection">
+  <section>
+    <div class="maindiv">
+    <h1>Best Of Products 2</h1>
+  </div>
+  </section>
+  <main >
+    
+    <section class="product">
+     
+      <img src="{% static "images/a5.jpeg" %}" alt="{{ product.product_name }}" height="218px" width="182px">
+        <h2><strong>Container  Storage Box</strong></h2>
+        <p>Simple containers made from gourds being sold for use as material storage</p>
+        <span class="price">₹399.00</span>  
+      </section> 
+      <section class="product">
+     
+        <img src="{% static "images/a3.jpeg" %}" alt="{{ product.product_name }}" height="218px" width="182px">
+          <h2><strong>Multiple Pen Holder</strong></h2>
+          <p>This product is multiple pen & pencil store Holder</p>
+          <span class="price">₹699.00</span>  
+        </section> 
+      
+        <section class="product">
+     
+          <img src="{% static "images/a2.jpeg" %}" alt="{{ product.product_name }}" height="218px" width="182px">
+            <h2><strong>Table Decoration Tree</strong></h2>
+            <p>This product  is most unique and table decoration item</p>
+            <span class="price">₹799.00</span>  
+          </section> 
+    
+          <section class="product">
+     
+            <img src="{% static "images/a1.jpeg" %}" alt="{{ product.product_name }}" height="218px" width="182px">
+              <h2><strong>lamp light show piece</strong></h2>
+              <p>Lamp in use by Home Decoration and unique product</p>
+              <span class="price">₹499.00</span>  
+            </section> 
+    
+            <section class="product">
+     
+              <img src="{% static "images/p9.jpeg" %}" alt="{{ product.product_name }}" height="218px" width="182px">
+                <h2><strong>material store box</strong></h2>
+                <p>This is store material in small size us box</p>
+                <span class="price">₹299.00</span>  
+              </section> 
+            
+              <section class="product">
+     
+                <img src="{% static "images/p8.jpeg" %}" alt="{{ product.product_name }}" height="218px" width="182px">
+                  <h2><strong>Classic Pen Holder</strong></h2>
+                  <p>Its product is unique and multiple pen & pencile store product.</p>
+                  <span class="price">₹999.00</span>  
+                </section> 
+              
+  
+  </main>
+  </section>
+
+<!-- ..................... Footer ..........................  -->
+
+      <!-- Footer -->
+{% include "footer.html" %}

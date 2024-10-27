@@ -1,0 +1,118 @@
+
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renewo product</title>
+    <link rel="stylesheet" href="{% static 'product_review.css'%}">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="crossorigin="anonymous" referrerpolicy="no-referrer"/>
+ 
+</head>
+<body>
+    <body>
+    
+    <!-- .................... Navigation Bar For RENEWO In HTML  ........................... -->
+    {% include "nav.html" %}
+    {% comment %} <nav>
+        <div class="logo">
+          <!-- <img  class="Renewo_img" src=" Renewo.png" alt="">-->
+          <a href="RenewO.html" class="logo"> 𝓡𝓮𝓷𝓮𝔀𝓸</a>
+        </div>
+        <div class="search">
+          <input type="text" placeholder="Search for Products, Brands and More" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+  
+        <a href="RenewoLogin.html" class="navlink angledownicon"
+          >My Account
+          <i class="fa-solid fa-angle-down"></i>
+        </a>
+        <a href="becomeaSeller.html" class="navlink">Become a Seller </a>
+        <a href="company.html" class="navlink angledownicon">Company 
+        </a>
+        <!-- <button class="login"> Login </button>  -->
+        <a href="#" class="navlink">
+          <i class="fa-solid fa-cart-shopping"></i>
+          Cart</a>
+  
+      </nav> {% endcomment %}
+     
+      <section >
+          <div class="productlist">
+              <span class="productspan">
+                  Plastic
+          <i class="fa-solid fa-angle-down"></i>
+                  
+              </span>
+              <span class="productspan">
+                   Shoes
+          <i class="fa-solid fa-angle-down"></i>
+                   
+              </span>
+              <span class="productspan">
+                  Clothes
+          <i class="fa-solid fa-angle-down"></i>
+                  
+              </span>
+       </section>
+       
+      
+    <div class="container">
+        <div class="wrapper">
+            {% comment %} {% for product in products %}    {% endcomment %}
+            
+                  <img src="{{ product.imageURL }}"    id="imgbox">
+
+                
+                <div class="text">
+                    <div class="containt">
+                        <p class="brand">Brand : Renwo</p>
+                        <h2 >{{ product.product_name }}</h2>
+                       
+                        <div class="review">
+                            <span>(4.5)</span>
+                            <span class="fa fa-star"></span>                            
+                        </div>
+
+
+<div class="price_box">
+                            <p class="price" >₹{{ product.product_price|floatformat:2 }}</p>
+   
+                        <strike  class="strike"> &#8377;12,99</strike>
+                        <p class="offer">67% off</p>
+                        </div>
+                       <div class="size"> Size : 
+                        <div class="size1">M</div>
+                        <div class="size1">L</div>
+                        <div class="size1">XL</div>
+                       <p class="offer1" >Size Chart <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzOCIgaGVpZ2h0PSIxMiI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9IiMyODc0RjAiIHN0cm9rZS13aWR0aD0iMS4zIj48cGF0aCBmaWxsPSIjRkZGIiBmaWxsLXJ1bGU9Im5vbnplcm8iIGQ9Ik0zNy4zNS42NUguNjV2MTAuN2gzNi43Vi42NXoiLz48cGF0aCBmaWxsPSIjODc4Nzg3IiBkPSJNNi42NSA4LjY1aDF2Mi43aC0xem00LTNIMTFsLS4zNS0uMzVWNWwtLjE1LjE1LS4xNS0uMTV2LjNsLS4zNS4zNWguMzV2NS43SDEwbC4zNS4zNXYuM2wuMTUtLjE1LjE1LjE1di0uM2wuMzUtLjM1aC0uMzV2LTUuN3ptNSAzSDE2bC0uMzUtLjM1VjhsLS4xNS4xNS0uMTUtLjE1di4zbC0uMzUuMzVoLjM1djIuN0gxNWwuMzUuMzV2LjNsLjE1LS4xNS4xNS4xNXYtLjNsLjM1LS4zNWgtLjM1di0yLjd6bTQtM2gxdjUuN2gtMXptNCAzaDF2Mi43aC0xem05IDBoMXYyLjdoLTF6bS00LTNoMXY1LjdoLTF6Ii8+PC9nPjwvc3ZnPg==" alt=""></p>
+
+                       </div>
+                       <p>Qwantity : <input type="text" value="1" class="input"></p>
+                       <button class="cart" type="submit" form="cartForm">
+                        <span class="fa fa-shopping-cart"></span>
+                        Add to cart
+                      </button>
+                      
+                      <form id="cartForm" method="POST" action="/cart/add">
+                        {% csrf_token %}
+                        <input type="hidden" name="product_name" value="{{ product.product_name }}">
+                        <input type="hidden" name="quantity" value="1">
+                      </form>
+                       <a href="/products/payment"><button class="buy">
+                        <span class="fa fa-shopping-cart"></span>
+                        Buy now
+                       </button></a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    {% comment %} {% endfor %} {% endcomment %}
+</body>
+</html>

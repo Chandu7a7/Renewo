@@ -1,0 +1,120 @@
+{% include "nav.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href= "{% static 'cart.css'%}"/>  
+    
+</head>
+<body>
+
+    <!-- product  -->
+    <section>
+    <div class="ren">
+        <h2 class="renh2">𝓡𝓮𝓷𝓮𝔀𝓸
+        </h2>
+        
+        <div class="container1">
+          {% for cart_item in cart_items %}
+        <div class="product1">
+            <div class="product-image1">
+                <img src="{{cart_item.imageURL}}" alt="Product 1">
+            </div>
+            <div class="product-details1">
+              
+                <h2 class="product-title1">{{cart_item.product_name}}</h2>
+             
+               
+                <p class="product-description1">{{cart_item.product_decp}}</p>
+                <p>Quantity: {{ cart_item.quantity }}</p>
+                <button class="product-button1">SAVE FOR LATER</button>
+                <button class="buy-button1">REMOVE</button>
+              
+            </div>
+        </div>
+        {% endfor %}
+
+       
+        {% comment %} <div class="product1">
+            <div class="product-image1">
+                <img src="msg2030572730-918.jpg" alt="Product 1">
+            </div>
+            <div class="product-details1">
+                <h2 class="product-title1">Handmade Bottle Craft</h2>
+                <p class="product-description1">This beautiful Bottle Craft is handmade and features a unique Home Decoration.</p>
+                
+                <button class="product-button1">SAVE FOR LATER</button>
+                <button class="buy-button1">REMOVE</button>
+            </div>
+        </div>
+        <div class="product1">
+            <div class="product-image1">
+                <img src="msg2030572730-918.jpg" alt="Product 1">
+            </div>
+            <div class="product-details1">
+                <h2 class="product-title1">Handmade Bottle Craft</h2>
+                <p class="product-description1">This beautiful Bottle Craft is handmade and features a unique Home Decoration.</p>
+                
+                <button class="product-button1">SAVE FOR LATER</button>
+                <button class="buy-button1">REMOVE</button>
+            </div>
+        </div>
+        <div class="product1">
+            <div class="product-image1">
+                <img src="msg2030572730-918.jpg" alt="Product 1">
+            </div>
+            <div class="product-details1">
+                <h2 class="product-title1">Handmade Bottle Craft</h2>
+                <p class="product-description1">This beautiful Bottle Craft is handmade and features a unique Home Decoration.</p>
+                
+                <button class="product-button1">SAVE FOR LATER</button>
+                <button class="buy-button1">REMOVE</button>
+            </div>
+        </div>
+                    {% endcomment %}
+        </div>
+    </div>
+</section>
+<div class="table-container">
+    <table>
+        <div class="re">
+                <h1>PRICE DETAILS</h1>
+            </div>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="main">  Price(3 items)</td>
+                <td>₹837</td>
+            </tr>
+            <tr>
+                <td id="main">Discount</td>
+                <td>-₹837.00</td>
+            </tr>
+            <tr>
+                <td id="main">Delivery Charges</td>
+                <td class>₹100.00</td>
+            </tr>
+            <tr>
+                <td id="main">Secured Packaging fee</td>
+                <td>₹10.00</td>
+            </tr>
+            <tr>
+                <td id="main">Total Amount</td>
+                <td>₹747.00</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% comment %} footer {% endcomment %}
+{% include "footer.html" %}
+
+</body>
+</html>

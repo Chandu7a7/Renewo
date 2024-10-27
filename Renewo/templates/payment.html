@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'payment.css'%}">
+    <link rel="stylesheet" href="{% static 'payment2.css'%}">
+    <script>function generateCaptcha()
+
+        {
+        var cap = new Array('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z');
+        
+        var i;
+        
+        for (i=0;i<4;i++){
+        var a = cap[Math.floor(Math.random() * cap.length)];
+        var b = cap[Math.floor(Math.random() * cap.length)];
+        var c = cap[Math.floor(Math.random() * cap.length)];
+        var d = cap[Math.floor(Math.random() * cap.length)];
+        
+        }
+        
+        
+        var code = a + b + c + d;
+        document.getElementById("mainCaptcha").value = code
+        }
+        
+        
+        function CheckValidCaptcha(){
+        var string1 = removeSpaces(document.getElementById('mainCaptcha').value);
+        var string2 = removeSpaces(document.getElementById('txtinput').value);
+        
+         if (string1 == string2){
+        document.getElementById('success').innerHTML = "Form is validated Successfully";
+        alert("Confirm your Order Successfully");
+        window.location = "";
+        return true;
+        }
+        
+        else{
+        document.getElementById('error').innerHTML = "Please Enter a Valid Captcha";
+        
+        return false;
+        }
+        
+        }
+        
+        function removeSpaces(string){
+        return string.split(' ').join('');
+        }
+        
+        
+        function hideshowdiv(val){
+        if(val==1)
+        {
+            document.getElementById('captch').style.display='block';
+            document.getElementById('captch1').style.display='none';
+        
+          }
+          if(val==2)
+        {
+            document.getElementById('captch').style.display='none';
+            document.getElementById('captch1').style.display='block';
+        
+          }
+        
+         }
+        
+         function paynow(){
+          alert("Confirm your order")
+          document.getElementById('captch').style.display='none';
+         }
+        </script>
+</head>
+<body onload="generateCaptcha();">
+    <div class='container'>
+        <div class='window'>
+          <div class=''>
+            <div class="table-container">
+              <table>
+                  <div class="re">
+                          <h1>PRICE DETAILS</h1>
+                      </div>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td id="main">  Price(3 items)</td>
+                          <td>₹837.00</td>
+                      </tr>
+                      <tr>
+                          <td id="main">Discount</td>
+                          <td>-₹100.00</td>
+                      </tr>
+                      <tr>
+                          <td id="main">Delivery Charges</td>
+                          <td class>₹0.00</td>
+                      </tr>
+                      <tr>
+                          <td id="main">Secured Packaging fee</td>
+                          <td>₹10.00</td>
+                      </tr>
+                      <tr>
+                          <td id="main">Total Amount</td>
+                          <td>₹747.00</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      
+    </div>
+              <div class='credit-info'>
+                <div class='credit-info-content'>
+                  <p id="pot">Payment Option<p>
+                  <p class="opt">RECOMMENDED PAYMENT OPTION<p>
+                 <div class="centered">
+                 
+                    <form action="">
+                    <label  for="r1" style="color: black;" >
+                      <div id="paymentpoint">
+                      <input type="radio" onclick="hideshowdiv(1)" name="rr" id="r1">Case on dilivery</label>
+                  </div>
+                    <div id="captch">
+                      
+                      <input type="text" id="mainCaptcha" readonly="readonly"/>
+                      <input type="button" id="refresh" value="Refresh" onclick="generateCaptcha();"/>
+                     
+                      <input type="text" id="txtinput" placeholder="enter the capture"/>
+                      <br>
+                      
+                      <input type="button" id="Button1" value="Place Order" onclick="CheckValidCaptcha();"/>
+                   
+                      <span id="error" style="color:red"></span>
+                     
+                      <span id="success" style="color:green"></span>
+                    </div>  
+                  
+                  <p class="opt">OTHER PAYMENT OPTION<p>
+                    <div id="paymentpoint" >
+                    <input type="radio" onclick="hideshowdiv(2)" name="rr" id="r1">Google Pay / BHIM UPI</label>
+                  </div>
+                    <br>
+                    <div id="captch1">
+                    <input type="text" name="rr" id="upiid" placeholder="Enter UPI ID here" required>
+                    <input type="button" id="Button1" value="PAY NOW" onclick="paynow()"/>
+                    </div>
+                </form>
+                </div>
+                  </div> 
+             
+            </div>
+      </div>
+      
+</body>
+</html>

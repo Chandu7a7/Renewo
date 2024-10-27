@@ -1,0 +1,394 @@
+username :- aman
+password :- Chandu@123
+
+
+
+// imp html //
+
+
+    <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RenewO</title>
+    <link rel="shortcut icon" href="Renewo.png" type="image/x-icon" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="crossorigin="anonymous" referrerpolicy="no-referrer"/>
+     {% load static %} 
+      <link rel="stylesheet" href= "{% static 'aman.css'%}"/>
+
+  </head>
+  <body>
+    
+    <!-- .................... Navigation Bar For RENEWO In HTML  ........................... -->
+     
+    <nav>
+      <div class="logo">
+        <!-- <img  class="Renewo_img" src=" Renewo.png" alt=""> -->
+        <h1 class="Renewo">Renewo</h1>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Search for Products, Brands and More" />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+
+      <a href="#" class="navlink angledownicon"
+        >My Account
+        <i class="fa-solid fa-angle-down"></i>
+      </a>
+      <a href="slider.html" class="navlink">Become a Seller </a>
+      <a href="#" class="navlink angledownicon"
+        >More
+        <i class="fa-solid fa-angle-down"></i>
+      </a>
+      <a href="#" class="navlink">
+        <i class="fa-solid fa-cart-shopping"></i>
+        Cart</a>
+
+    </nav>
+   
+    <section >
+        <div class="productlist">
+            <span class="productspan">
+                Electronics
+        <i class="fa-solid fa-angle-down"></i>
+                
+            </span>
+            <span class="productspan">
+                 TVs & Appliance
+        <i class="fa-solid fa-angle-down"></i>
+                 
+            </span>
+            <span class="productspan">
+                Men
+        <i class="fa-solid fa-angle-down"></i>
+                
+            </span>
+            <span class="productspan">
+                Women
+        <i class="fa-solid fa-angle-down"></i>
+                
+            </span>
+            <span class="productspan">
+                 Baby & Kids
+        <i class="fa-solid fa-angle-down"></i>
+                 
+            </span>
+            <span class="productspan">
+                 Home & Furniture
+        <i class="fa-solid fa-angle-down"></i>
+                 
+            </span>
+            <span class="productspan">
+                 Sports , books & More
+        <i class="fa-solid fa-angle-down"></i>
+                 
+            </span>
+            <span class="productspan">
+                Flights Offer Zone
+        <i class="fa-solid fa-angle-down"></i>
+                
+            </span>
+             
+        </div>
+ 
+    </section>
+
+<!-- ............. Slider Coding ........................... -->
+ 
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <img src="https://rukminim1.flixcart.com/fk-p-flap/1600/270/image/8a89ee09acc1a9e5.jpg?q=20" class="slider_img">
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="https://rukminim1.flixcart.com/fk-p-flap/1600/270/image/7a4df06792442d16.jpg?q=20" class="slider_img">
+  </div>
+  
+  <div class="mySlides fade">
+    <img src=" https://rukminim1.flixcart.com/fk-p-flap/1600/270/image/89c26b04d640c7a9.jpg?q=20" class="slider_img">
+  </div>
+  
+  <div class="mySlides fade">
+    <img src=" https://rukminim1.flixcart.com/fk-p-flap/1600/270/image/4529fd434a85c683.jpg?q=20" class="slider_img">
+  </div>
+  <div class="mySlides fade">
+    <img src=" https://rukminim1.flixcart.com/fk-p-flap/1600/270/image/3959ad9f670aeeeb.jpg?q=20" class="slider_img">
+   </div>
+  
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+
+  </div>
+
+<!-- ............................. Slider Javascipt Coding ...........................   -->
+<script src="renewo.js"></script>
+
+<!-- .............................. Tnis is box section .......................  -->
+
+<section class="mainsection">
+<section>
+  <div class="maindiv">
+  <h1>Best Of Products</h1>
+</div>
+</section>
+<main >
+  
+  <section class="product">
+      <img src="Material4.webp" alt="Product 1" height="218px" width="182px">
+      <h2>Product 1</h2>
+      <p>Description of Product 1.</p>
+      <span class="price">$19.99</span>
+  </section>
+
+  <section class="product">
+      <img src="Material4.webp" alt="Product 2" height="218px" width="182px">
+      <h2>Product 2</h2>
+      <p>Description of Product 2.</p>
+      <span class="price">$29.99</span>
+  </section>
+
+  
+  <section class="product">
+    <img src="Material2.webp" alt="Product 2" height="218px" width="182px">
+    <h2>Product 2</h2>
+    <p>Description of Product 2.</p>
+    <span class="price">$29.99</span>
+</section>
+
+<section class="product">
+  <img src="Material3.webp" alt="Product 2" height="218px" width="182px">
+  <h2>Product 2</h2>
+  <p>Description of Product 2.</p>
+  <span class="price">$29.99</span>
+</section>
+
+<section class="product">
+  <img src="Material4.webp" alt="Product 2" height="218px" width="182px">
+  <h2>Product 2</h2>
+  <p>Description of Product 2.</p>
+  <span class="price">$29.99</span>
+</section>
+
+<section class="product">
+  <img src="Material4.webp" alt="Product 2" height="218px" width="182px">
+  <h2>Product 2</h2>
+  <p>Description of Product 2.</p>
+  <span class="price">$29.99</span>
+</section>
+
+</main>
+</section>
+
+
+<section class="mainsection">
+  <section>
+    <div class="maindiv">
+    <h1>Best Of Products 2</h1>
+  </div>
+  </section>
+  <main >
+    
+    <section class="product">
+        <img src="renewo2.jpg" alt="Product 1" height="218px" width="182px">
+        <h2>Product 1</h2>
+        <p>Description of Product 1.</p>
+        <span class="price">$19.99</span>
+    </section>
+  
+    <section class="product">
+        <img src="renewo1.jpg" alt="Product 2" height="218px" width="182px">
+        <h2>Product 2</h2>
+        <p>Description of Product 2.</p>
+        <span class="price">$29.99</span>
+    </section>
+  
+    
+    <section class="product">
+      <img src="renewo2.jpg" alt="Product 2" height="218px" width="182px">
+      <h2>Product 2</h2>
+      <p>Description of Product 2.</p>
+      <span class="price">$29.99</span>
+  </section>
+  
+  <section class="product">
+    <img src="renewo3.jpg" alt="Product 2" height="218px" width="182px">
+    <h2>Product 2</h2>
+    <p>Description of Product 2.</p>
+    <span class="price">$29.99</span>
+  </section>
+  
+  
+  <section class="product">
+    <img src="renewo4.jpg" alt="Product 2" height="218px" width="182px">
+    <h2>Product 2</h2>
+    <p>Description of Product 2.</p>
+    <span class="price">$29.99</span>
+  </section>
+  
+  <section class="product">
+    <img src="renewo2.jpg" alt="Product 2"  height="218px" width="182px">
+    <h2>Product 2</h2>
+    <p>Description of Product 2.</p>
+    <span class="price">$29.99</span>
+  </section>
+  
+  </main>
+  </section>
+
+<!-- ..................... Footer ..........................  -->
+
+      <!-- Footer -->
+      <footer>
+        <div class="container">
+          <div class="footer-cols">
+            <ul>
+              <li>ABOUT</li>
+              <li>
+                <a href="#">Contact Us</a>
+              </li>
+              <li>
+                <a href="#"> About Us </a>
+              </li>
+              <li>
+                <a href="#"> Careers </a>
+              </li>
+              <li>
+                <a href="#"> Stories </a>
+              </li>
+              <li>
+                <a href="#"> Press </a>
+              </li>
+              <li>
+                <a href="#"> Wholesale </a>
+              </li>
+              <li>
+                <a href="#"> Cleartrip </a>
+              </li>
+              <li>
+                <a href="#"> Corporate </a>
+              </li>
+              <li>
+                <a href="#"> Information </a>
+              </li>
+            </ul>
+
+            <ul>
+              <li> HELP </li>
+              <li>
+                <a href="#"> Payments </a>
+              </li>
+              <li>
+                <a href="#"> Shipping </a>
+              </li>
+              <li>
+                <a href="#">Cancellation & return </a>
+              </li>
+              <li>
+                <a href="#"> FAQ </a>
+              </li>
+              <li>
+                <a href="#"> Report </a>
+              </li>
+              <li>
+                <a href="#"> Infringement </a>
+              </li>
+            </ul>
+
+            <ul>
+              <li>  CONSUMER POLICY </li>
+              <li>
+                <a href="#" > Cancellation & Return</a>
+              </li>
+              <li>
+                <a href="#"> Term of Use </a>
+              </li>
+              <li>
+                <a href="#"> Security </a>
+              </li>
+              <li>
+                <a href="#"> Privacy </a>
+              </li>
+              <li>
+                <a href="#"> Sitemap </a>
+              </li>
+              <li>
+                <a href="#"> Grievance Redressal </a>
+              </li>
+              <li>
+                <a href="#"> EPR Compliance </a>
+              </li>
+            
+            </ul>
+
+            <ul>
+              <li> SOCIAL </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-twitter"></i> Twitter </a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+              </li>
+              
+            </ul>
+
+          </div>
+        </div>
+        
+    </footer>
+
+
+
+
+    <a href="signup">signup</a>
+
+
+
+
+
+
+
+     </body>
+</html>
+<form method="post" >
+      {% csrf_token %}
+      <div class="mb-3 py-4">
+        <label for="name" class="form-label">Username</label>
+        <input type="text" name="uname" value="uname" class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="mb-3 py-4 mr-2">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <div class="mb-3 py-4">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" name="pass1" class="form-control" id="exampleInputPassword1">
+      </div>
+      {% comment %} <div class="mb-3 py-4">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" name="pass2" class="form-control" id="exampleInputPassword1">
+      </div> {% endcomment %}
+      
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+
+<input type="text" class="input" name="pass1" placeholder="Enter Your Password" >
+      <label for="" class="label">Enter Email ID </label>

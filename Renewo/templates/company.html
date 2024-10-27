@@ -1,0 +1,192 @@
+{% include "nav.html" %}
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>company</title>
+<link rel="stylesheet" href="{% static "company.css" %}">
+    {% comment %} <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> {% endcomment %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  </head>
+  <body>
+    <!-- This is navigation bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid ">
+          <a class="navbar-brand" href="#">𝓡𝓮𝓷𝓮𝔀𝓸</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="dropdown">
+                <button class="dropbtn">Sell waste</button>
+                <div class="dropdown-content">
+                    <a href="#">Clothes</a>
+                    <a href="#">Plastic</a>
+                    <a href="#">Shoes</a>
+                    <a href="#">Help & support</a>
+                </div>
+            </div>
+           
+          </div>
+          <form class="box1" role="search">
+            
+            <button class="box2" id="stsell" type="submit"> <a href="company-info">𝐒𝐭𝐚𝐫𝐭 𝐩𝐮𝐫𝐜𝐡𝐚𝐬𝐞𝐫 </a></button>
+          </form>
+        </div>
+      </nav>
+      <!-- this is home seller -->
+      <div id="home">
+        <div class="box">
+        <h3>​🇱​​🇮​​🇲​​🇮​​🇹​​🇪​​🇩​ ​🇹​​🇮​​🇲​​🇪​ ​🇴​​🇫​​🇫​​🇪​​🇷​</h3><br>
+          <h1>𝗕𝗲𝗰𝗼𝗺𝗲 𝗮 𝐩𝐮𝐫𝐜𝐡𝐚𝐬𝐞𝐫 𝗼𝗻 <br> 𝗿𝗲𝗻𝗲𝘄𝗼</h1><br>
+         <p>ꜱᴇʟʟ ᴛᴏ ᴄʀᴏʀᴇꜱ ᴏꜰ ᴄᴜꜱᴛᴏᴍᴇʀꜱ ᴡɪᴛʜ 50% ᴏꜰꜰ ᴏɴ ꜱᴇʟʟɪɴɢ ꜰᴇᴇ* ᴏɴ <br> ​🇷​​🇪​​🇳​​🇪​​🇼​​🇴.ɪɴ<p><br>
+         <button class="box2" id="stsell" type="submit"> <a href="company-info">𝐒𝐭𝐚𝐫𝐭 𝐩𝐮𝐫𝐜𝐡𝐚𝐬𝐞𝐫 </a></button> 
+        </div>
+        <div class="box">
+          <img src="{% static "images/company.png" %}" alt="">
+        </div>
+      </div>
+      </div>
+
+      <div id="about">
+        <h1> <b>𝗪𝗵𝘆 𝐩𝐮𝐫𝐜𝐡𝐚𝐬𝐞𝐫 𝗼𝗻 𝗿𝗲𝗻𝗲𝘄𝗼 ?</b</h1><br><br>
+          <div class="text1">
+            <img src="{% static "images/recive.png" %}" alt=""><br>
+            <h2>𝐑𝐞𝐜𝐞𝐢𝐯𝐞 𝐭𝐢𝐦𝐞𝐥𝐲 <br>  𝐩𝐚𝐲𝐦𝐞𝐧𝐭𝐬</h2>
+            <p>Renewo ensures your payments are <br> deposited directly in your bank account <br> within 7-14 days.
+            </p>
+
+          </div>
+          <div class="text1">
+            <img src="{% static "images/reach.png" %}" alt=""><br>
+            <h2>𝐑𝐞𝐚𝐜𝐡 𝐜𝐫𝐨𝐫𝐞𝐬 𝐨𝐟  <br> 𝐜𝐮𝐬𝐭𝐨𝐦𝐞𝐫𝐬</h2>
+            <p>Sell to crores of engaged customer <br>visiting Renewo.in on desktop and <br> through our website.</p>
+
+          </div>
+          <div class="text1">
+            <img src="{% static "images/fast.png" %}" alt=""><br>
+            <h2>𝐒𝐭𝐫𝐞𝐬𝐬-𝐟𝐫𝐞𝐞 <br>  𝐝𝐞𝐥𝐢𝐯𝐞𝐫𝐲</h2>
+            <p>Deliver to 100% of India's serviceable <br> pincodes, through Easy Ship & Fulfillment <br> by Renewo</p>
+
+          </div>
+
+      </div>
+<div id="service">
+  <div class="img1">
+  <h1> <b>𝐒𝐭𝐚𝐫𝐭 𝐩𝐮𝐫𝐜𝐡𝐚𝐬𝐢𝐧𝐠 𝐭𝐨𝐝𝐚𝐲</b></h1><br>
+  <p>𝙿𝚞𝚝 𝚢𝚘𝚞𝚛 𝚙𝚛𝚘𝚍𝚞𝚌𝚝𝚜 𝚒𝚗 𝚏𝚛𝚘𝚗𝚝 𝚘𝚏 𝚖𝚘𝚛𝚎 𝚝𝚑𝚊𝚗 𝟹𝟶𝟶 𝚖𝚒𝚕𝚕𝚒𝚘𝚗 <br>𝚌𝚞𝚜𝚝𝚘𝚖𝚎𝚛𝚜 𝚠𝚘𝚛𝚕𝚍𝚠𝚒𝚍𝚎</p><br>
+  <button class="box2" id="stsell" type="submit"> <a href="#">𝐒𝐭𝐚𝐫𝐭 𝐩𝐮𝐫𝐜𝐡𝐚𝐬𝐞𝐫 </a></button>
+</div>
+<div class="img1">
+  <img style="height: 400px;"  src="{% static "images/delivery.png" %}" alt="">
+</div>
+</div>
+<!-- ..................... Footer ..........................  -->
+<footer>
+        <div class="container3">
+          <div class="footer-cols">
+            <ul>
+              <li>ABOUT</li>
+              <li>
+                <a href="#">Contact Us</a>
+              </li>
+              <li>
+                <a href="#"> About Us </a>
+              </li>
+              <li>
+                <a href="#"> Careers </a>
+              </li>
+              <li>
+                <a href="#"> Stories </a>
+              </li>
+              <li>
+                <a href="#"> Press </a>
+              </li>
+              <li>
+                <a href="#"> Wholesale </a>
+              </li>
+              <li>
+                <a href="#"> Cleartrip </a>
+              </li>
+              <li>
+                <a href="#"> Corporate </a>
+              </li>
+              <li>
+                <a href="#"> Information </a>
+              </li>
+            </ul>
+
+            <ul>
+              <li> HELP </li>
+              <li>
+                <a href="#"> Payments </a>
+              </li>
+              <li>
+                <a href="#"> Shipping </a>
+              </li>
+              <li>
+                <a href="#">Cancellation & return </a>
+              </li>
+              <li>
+                <a href="#"> FAQ </a>
+              </li>
+              <li>
+                <a href="#"> Report </a>
+              </li>
+              <li>
+                <a href="#"> Infringement </a>
+              </li>
+            </ul>
+
+            <ul>
+              <li>  CONSUMER POLICY </li>
+              <li>
+                <a href="#" > Cancellation & Return</a>
+              </li>
+              <li>
+                <a href="#"> Term of Use </a>
+              </li>
+              <li>
+                <a href="#"> Security </a>
+              </li>
+              <li>
+                <a href="#"> Privacy </a>
+              </li>
+              <li>
+                <a href="#"> Sitemap </a>
+              </li>
+              <li>
+                <a href="#"> Grievance Redressal </a>
+              </li>
+              <li>
+                <a href="#"> EPR Compliance </a>
+              </li>
+            
+            </ul>
+
+            <ul>
+              <li> SOCIAL </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-twitter"></i> Twitter </a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+              </li>
+              
+            </ul>
+
+          </div>
+        </div>
+        
+    </footer>
+</body>
+</html>

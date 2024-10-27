@@ -1,0 +1,93 @@
+body{
+    background: linear-gradient(white, rgb(142, 211, 220));
+    height: 800px;
+}
+h2{
+    font-size: 24px;
+    padding-left: 220px;
+    margin-top: 42px;
+    color: rgb(226, 159, 92);
+
+}
+#logo{
+    margin-left:24px ;
+}
+.form-container input{
+    width: 220px;
+    
+}
+.form-container{
+    margin-left: 13px;
+}
+.form-container h1{
+    padding-left: 210px;
+}
+.form-container h4{
+    padding-left: 210px;
+    color:rgba(17, 17, 17, 0.768);
+
+}
+form{
+    margin-left: 190px;
+    font-size: 17px;
+    color:rgba(0, 0, 0, 0.768) ;
+}
+.form-container p{
+    color:rgba(17, 17, 17, 0.768) ;
+    font-size: 12px;
+}
+.form-container span{
+    color: rgb(48, 82, 208);
+}
+.form-container button{
+    font-size: 17px;
+    background-color: rgb(240, 240, 240);
+    width: 120px;
+    height: 30px;
+    color: rgb(39, 39, 39);
+}
+a:hover{
+    color: rgb(255, 0, 0);
+}
+header .text{
+    display: inline-block;
+}
+.text .box{
+    display: inline-block;
+}
+.box{
+    padding: 12px;
+}
+.box h4{
+    padding-left: 840px;
+    font-size: 23px;
+    color:rgba(63, 63, 63, 0.768);
+}
+.box button{
+    height: 40px;
+    width: 90px;
+    border: 1px solid rgb(60, 41, 183);
+    color: rgb(60, 41, 183);
+    background-color: aliceblue;
+}
+.box button a{
+    text-decoration: none;
+}
+button:hover{
+  background-color:  rgb(121, 184, 200);
+}
+#hover:hover{
+    background-color: rgb(73, 192, 196);
+    cursor: pointer;
+}
+#user .user1{
+    display: inline-block;padding-top: 12px;
+}
+#wastege .waste{
+    display: inline-block;
+
+}
+
+.waste h4{
+    font-size: 24px;
+}

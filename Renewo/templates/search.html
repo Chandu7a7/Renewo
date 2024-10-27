@@ -1,0 +1,120 @@
+{% include "nav.html" %}
+
+  {% load static %}
+
+    <link rel="stylesheet" href= "{% static 'search.css'%}"/> 
+
+
+ 
+    <!-- product  -->
+        <div class="c7">
+          {% for product in results  %}
+        <div class="product2">
+            <div class="product-image2">
+                <a href="/products/product-review/{{ product.product_name }}"><img src="{{product.imageURL}}" alt="Product 1"></a>
+            </div>
+            <div class="product-details2">
+                <h2 class="product-title2">{{product.product_name}}</h2>
+                <p class="product-description2">{{product.product_decp}}</p>
+                <span>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </span>
+               
+                <p class="product-price2">${{ product.product_price|floatformat:2 }}</p>
+                {% comment %} <button class="product-button2">Add to Cart</button>
+                <button class="buy-button2">Buy Now</button> {% endcomment %}
+            </div>
+
+            
+        </div>
+        {% endfor %}
+       {% comment %} <div class="product2">
+          <div class="product-image2">
+              <img src="bottle.png" alt="Product 1">
+          </div>
+          <div class="product-details2">
+              <h2 class="product-title2">Handmade Bottle Craft</h2>
+              <p class="product-description2">This beautiful Bottle Craft is handmade and features a unique Home Decoration.</p>
+              <span>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+              </span>
+             
+              <p class="product-price2">$24.99</p>
+              <button class="product-button2">Add to Cart</button>
+              <button class="buy-button2">Buy Now</button>
+          </div>
+      </div> {% endcomment %}
+    {% comment %}    <div class="product2">
+        <div class="product-image2">
+            <img src="bottle.png" alt="Product 1">
+        </div>
+        <div class="product-details2">
+            <h2 class="product-title2">Handmade Bottle Craft</h2>
+            <p class="product-description2">This beautiful Bottle Craft is handmade and features a unique Home Decoration.</p>
+            <span>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </span>
+           
+            <p class="product-price2">$24.99</p>
+            <button class="product-button2">Add to Cart</button>
+            <button class="buy-button2">Buy Now</button>
+        </div>
+    </div>
+    <div class="product2">
+      <div class="product-image2">
+          <img src="bottle.png" alt="Product 1">
+      </div>
+      <div class="product-details2">
+          <h2 class="product-title2">Handmade Bottle Craft</h2>
+          <p class="product-description2">This beautiful Bottle Craft is handmade and features a unique Home Decoration.</p>
+          <span>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+          </span>
+         
+          <p class="product-price2">$24.99</p>
+          <button class="product-button2">Add to Cart</button>
+          <button class="buy-button2">Buy Now</button>
+      </div>
+  </div>
+  <div class="product2">
+    <div class="product-image2">
+        <img src="bottle.png" alt="Product 1">
+    </div>
+    <div class="product-details2">
+        <h2 class="product-title2">Handmade Bottle Craft</h2>
+        <p class="product-description2">This beautiful Bottle Craft is handmade and features a unique Home Decoration.</p>
+        <span>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </span>
+       
+        <p class="product-price2">$24.99</p>
+        <button class="product-button2">Add to Cart</button>
+        <button class="buy-button2">Buy Now</button>
+    </div> {% endcomment %}
+</div>
+</div>
+      <!-- Footer -->
+     
+      {% include "footer.html" %}
+</body>
+</html>

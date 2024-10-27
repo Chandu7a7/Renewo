@@ -1,5 +1,5 @@
-<h1 align="center">Renewo eCommerce</h1>
 ![logo](https://github.com/Chandu7a7/Renewo/blob/main/Screenshot%20(114).png)
+<h1 align="center">Renewo eCommerce</h1>
 <p >A full-stack eCommerce web application built with Django, providing a seamless shopping experience for users and an admin dashboard for easy management of products and orders.</p>
 
 <p > <b>Description:</b> Renewo is an innovative eCommerce platform developed to promote sustainability by facilitating the purchase and resale of recycled and upcycled products. Created as a submission for the hackathon organized by SVP Polytechnic College Bhopal, Renewo addresses the pressing issue of waste management and environmental conservation.</p>

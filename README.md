@@ -36,7 +36,7 @@
     <li><strong>Frontend:</strong> HTML, CSS, JavaScript, Bootstrap</li>
     <li><strong>Database:</strong> SQLite (development), PostgreSQL/MySQL (production)</li>
     <li><strong>Authentication:</strong> Django’s built-in authentication system</li>
-    <li><strong>Payment Integration:</strong> (Optional, e.g., Stripe or PayPal)</li>
+    <li><strong>Payment Integration:</strong> (Optional, e.g., cash on delevery)</li>
 </ul>
 
 <h2 id="installation">Installation</h2>
